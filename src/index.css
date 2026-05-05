@@ -29,6 +29,7 @@ body {
   font-size: clamp(3rem, 10vw, 12rem);
   line-height: 0.9;
   padding-top: 0.1em;
+  padding-bottom: 0.15em;
   letter-spacing: -0.05em;
   font-weight: 900;
   text-transform: uppercase;

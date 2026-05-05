@@ -12,7 +12,7 @@ interface FadeInProps {
 
 const RevealText: React.FC<FadeInProps> = ({ children, delay = 0, className = "" }) => {
   return (
-    <div className={`overflow-hidden ${className}`}>
+    <div className={`overflow-hidden pb-8 pt-8 -mb-8 -mt-8 ${className}`}>
       <motion.div
         initial={{ y: "110%", rotateZ: 2 }}
         whileInView={{ y: 0, rotateZ: 0 }}
@@ -108,7 +108,7 @@ export default function App() {
         {/* Cow hide texture background */}
         <div className="absolute inset-0 z-0 opacity-40 mix-blend-multiply">
           <img 
-            src="https://images.unsplash.com/photo-1629517173822-799b64ea72fc?auto=format,compress&q=80&w=2000" 
+            src="https://images.unsplash.com/photo-1533158326339-7f3cf2404354?auto=format,compress&q=80&w=2000" 
             alt="Cow hide texture" 
             className="w-full h-full object-cover"
           />
@@ -287,18 +287,18 @@ export default function App() {
 
       {/* --- PARA QUEM É MEU TRABALHO --- */}
       <section className="relative min-h-screen flex flex-col lg:flex-row items-stretch">
-        <div className="lg:w-1/2 px-8 md:px-24 py-24 flex flex-col justify-center z-10 bg-black text-bg-gray">
+        <div className="lg:w-1/2 px-8 md:px-24 py-24 flex flex-col justify-center z-10 bg-bg-gray text-brand">
           <RevealText>
             <h2 className="text-[clamp(4rem,9vw,10rem)] leading-[0.8] pb-4 font-black uppercase tracking-tighter mb-12 text-brand hover:text-brand transition-colors duration-500">
-              PARA QUEM<br />É MEU<br /><span className="text-bg-gray">TRABALHO</span>
+              PARA QUEM<br />É MEU<br /><span className="text-brand">TRABALHO</span>
             </h2>
           </RevealText>
 
           <FadeIn delay={0.2}>
             <p className="text-2xl font-bold uppercase tracking-tight mb-8 text-brand">
-              Marcas que desejam ir<br />além de apenas postar e<br />querem construir<br /><span className="text-bg-gray">presença, identidade e<br />posicionamento no<br />digital.</span>
+              Marcas que desejam ir<br />além de apenas postar e<br />querem construir<br /><span className="text-brand">presença, identidade e<br />posicionamento no<br />digital.</span>
             </p>
-            <ul className="text-xl font-bold uppercase tracking-tight space-y-1 ml-4 list-disc marker:text-brand text-bg-gray">
+            <ul className="text-xl font-bold uppercase tracking-tight space-y-1 ml-4 list-disc marker:text-brand text-brand">
               <li>Moda feminina</li>
               <li>Acessórios</li>
               <li>Calçados</li>
@@ -310,12 +310,12 @@ export default function App() {
           </FadeIn>
         </div>
 
-        <div className="lg:w-1/2 h-[50vh] lg:h-auto relative img-wrap bg-black">
+        <div className="lg:w-1/2 h-[50vh] lg:h-auto relative img-wrap bg-bg-gray">
           <ParallaxImage 
             src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format,compress&q=80&w=1200" 
             alt="Red Stilettos"
             speed={15}
-            className="opacity-70 mix-blend-luminosity"
+            className="opacity-90 mix-blend-multiply"
           />
         </div>
       </section>
@@ -355,8 +355,8 @@ export default function App() {
 
         <div className="w-full md:w-1/2 h-[50vh] md:h-[80vh] relative mt-16 md:mt-0 img-wrap rounded-full mix-blend-multiply opacity-90 overflow-hidden bg-brand/20">
            <ParallaxImage 
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format,compress&q=80&w=800" 
-            alt="Modern Workspace"
+            src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?auto=format,compress&q=80&w=800" 
+            alt="Red Lollipop"
             speed={5}
             className="object-cover"
           />
@@ -405,8 +405,8 @@ export default function App() {
         <div className="w-[85%] md:w-[75%] flex flex-col lg:flex-row items-center p-8 md:p-16 gap-16 relative bg-bg-gray z-10 border-l-[10px] border-brand shadow-2xl">
           <div className="w-full lg:w-1/2 aspect-square relative img-wrap overflow-hidden shadow-xl rounded-sm">
             <ParallaxImage 
-              src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format,compress&q=80&w=1000" 
-              alt="Martini Glass"
+              src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format,compress&q=80&w=1000" 
+              alt="Makeup Powder"
               speed={10}
             />
           </div>
