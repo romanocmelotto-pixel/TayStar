@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #1DB900;
+  --color-bg-gray: #dbdbdb;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-gray);
+  color: var(--color-brand);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Utilities for editorial text */
+.text-massive {
+  font-size: clamp(4rem, 18vw, 24rem);
+  line-height: 0.75;
+  letter-spacing: -0.06em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.text-title {
+  font-size: clamp(3rem, 10vw, 12rem);
+  line-height: 0.9;
+  padding-top: 0.1em;
+  letter-spacing: -0.05em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.bg-stripes {
+  background: repeating-linear-gradient(
+    to right,
+    #000,
+    #000 50px,
+    #fff 50px,
+    #fff 100px
+  );
+}
+
+.img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hide scrollbar for cleaner look */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-gray);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand);
+}
