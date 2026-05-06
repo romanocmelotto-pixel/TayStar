@@ -105,14 +105,8 @@ export default function App() {
 
       {/* --- HERO SECTION --- */}
       <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden">
-        {/* Cow hide texture background */}
-        <div className="absolute inset-0 z-0 opacity-40 mix-blend-multiply">
-          <img 
-            src="https://images.unsplash.com/photo-1533158326339-7f3cf2404354?auto=format,compress&q=80&w=2000" 
-            alt="Cow hide texture" 
-            className="w-full h-full object-cover"
-          />
-        </div>
+        {/* Striped background */}
+        <div className="absolute inset-0 z-0 bg-stripes opacity-10 mix-blend-multiply pointer-events-none"></div>
         
         <div className="relative z-10 w-full text-center px-4 mt-20">
           <motion.div
@@ -121,13 +115,13 @@ export default function App() {
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
             <h1 className="text-massive flex flex-col items-center">
-              <span className="block mb-[-4vw]">TAYNÁ</span>
+              <span className="block mb-[-2vw] md:mb-[-4vw]">TAYNÁ</span>
               <span className="block text-brand">TEIXEIRA</span>
             </h1>
           </motion.div>
           
-          <FadeIn delay={0.5} className="mt-8 mb-20">
-            <p className="text-2xl md:text-4xl font-semibold uppercase tracking-widest bg-bg-gray/90 inline-block px-4 py-2 mix-blend-hard-light text-brand shadow-sm">
+          <FadeIn delay={0.5} className="mt-4 md:mt-8 mb-12 md:mb-20">
+            <p className="text-lg md:text-2xl lg:text-4xl font-semibold uppercase tracking-widest bg-bg-gray/90 inline-block px-4 py-2 mix-blend-hard-light text-brand shadow-sm">
               Social Media & Fashion Marketing
             </p>
           </FadeIn>
@@ -146,16 +140,16 @@ export default function App() {
       {/* --- QUEM SOU EU (1) --- */}
       <section className="relative min-h-screen flex items-stretch border-b border-brand/30">
         <SectionNumber num="1" />
-        <div className="flex-1 px-8 md:px-24 py-24 flex flex-col justify-center max-w-4xl z-10 bg-bg-gray">
+        <div className="flex-1 px-6 md:px-24 py-16 md:py-24 flex flex-col justify-center max-w-4xl z-10 bg-bg-gray">
           <RevealText>
-            <h2 className="text-title mb-12 text-brand">
+            <h2 className="text-title mb-8 md:mb-12 text-brand">
               QUEM SOU<br /><span className="text-brand">EU?</span>
             </h2>
           </RevealText>
           
-          <div className="max-w-2xl ml-auto text-right md:text-left">
+          <div className="max-w-2xl ml-auto text-left">
             <FadeIn delay={0.2}>
-              <p className="text-lg md:text-2xl font-bold uppercase leading-snug tracking-tight text-brand">
+              <p className="text-base md:text-2xl font-bold uppercase leading-snug tracking-tight text-brand">
                 Prazer, sou a Tay!<br />
                 <span className="text-brand">Social Media & Fashion Marketing com olhar estratégico para branding, posicionamento e construção de marcas desejáveis.</span><br /><br />
                 Minha expertise está no universo <span className="text-brand">Fashion e Beauty</span>, onde uno estética, storytelling e estratégia para transformar redes sociais em uma vitrine de valor e conexão com o público.<br /><br />
@@ -182,7 +176,7 @@ export default function App() {
       </MarqueeText>
 
       {/* --- ATUAÇÃO / SERVIÇOS (2) --- */}
-      <section className="relative py-32 px-8 md:px-24 overflow-hidden min-h-screen flex flex-col justify-center">
+      <section className="relative py-20 md:py-32 px-6 md:px-24 overflow-hidden min-h-screen flex flex-col justify-center">
         <SectionNumber num="2" />
         <div className="absolute inset-0 z-0 opacity-15 mix-blend-multiply pointer-events-none">
           <img src="https://images.unsplash.com/photo-1610427357007-0624a0d9ebaf?auto=format,compress&q=80" alt="Texture" className="w-full h-full object-cover" />
@@ -190,29 +184,29 @@ export default function App() {
         
         <div className="relative z-10 max-w-7xl mx-auto w-full">
           <RevealText>
-            <h2 className="text-title mb-20 text-center md:text-left text-brand">ATUAÇÃO</h2>
+            <h2 className="text-title mb-12 md:mb-20 text-center md:text-left text-brand">ATUAÇÃO</h2>
           </RevealText>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
             <FadeIn delay={0.2}>
-              <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 text-center md:text-right text-brand">
+              <h3 className="text-2xl md:text-6xl font-black uppercase tracking-tighter mb-4 md:mb-8 text-left md:text-right text-brand">
                 Branding &<br />Posicionamento
               </h3>
-              <ul className="text-xl md:text-2xl font-bold uppercase tracking-tight text-center md:text-right space-y-2 text-brand">
-                <li><span className="text-brand">•</span> Definição da identidade visual</li>
-                <li><span className="text-brand">•</span> Posicionamento estratégico</li>
-                <li><span className="text-brand">•</span> Construção de estética visual</li>
-                <li><span className="text-brand">•</span> Linguagem e Tom de comunicação</li>
-                <li><span className="text-brand">•</span> Direção criativa de campanhas</li>
-                <li><span className="text-brand">•</span> Criação de coleções e narrativas</li>
+              <ul className="text-sm md:text-2xl font-bold uppercase tracking-tight text-left md:text-right space-y-1 md:space-y-2 text-brand">
+                <li><span className="text-brand md:inline hidden">•</span> Definição da identidade visual <span className="text-brand md:hidden inline">•</span></li>
+                <li><span className="text-brand md:inline hidden">•</span> Posicionamento estratégico <span className="text-brand md:hidden inline">•</span></li>
+                <li><span className="text-brand md:inline hidden">•</span> Construção de estética visual <span className="text-brand md:hidden inline">•</span></li>
+                <li><span className="text-brand md:inline hidden">•</span> Linguagem e Tom de comunicação <span className="text-brand md:hidden inline">•</span></li>
+                <li><span className="text-brand md:inline hidden">•</span> Direção criativa de campanhas <span className="text-brand md:hidden inline">•</span></li>
+                <li><span className="text-brand md:inline hidden">•</span> Criação de coleções e narrativas <span className="text-brand md:hidden inline">•</span></li>
               </ul>
             </FadeIn>
 
             <FadeIn delay={0.4}>
-              <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 text-center md:text-left text-brand">
+              <h3 className="text-2xl md:text-6xl font-black uppercase tracking-tighter mb-4 md:mb-8 text-left text-brand">
                 Estratégia para<br />Redes Sociais
               </h3>
-              <ul className="text-xl md:text-2xl font-bold uppercase tracking-tight text-center md:text-left space-y-2 text-brand">
+              <ul className="text-sm md:text-2xl font-bold uppercase tracking-tight text-left space-y-1 md:space-y-2 text-brand">
                 <li><span className="text-brand">•</span> Planejamento de conteúdo</li>
                 <li><span className="text-brand">•</span> Calendário mensal</li>
                 <li><span className="text-brand">•</span> Definição de quadros fixos</li>
@@ -235,23 +229,22 @@ export default function App() {
         <span>redes sociais</span>
         <span className="italic">em vitrines</span>
         <span>de valor</span>
-        <span className="italic opacity-50 text-brand">|</span>
       </MarqueeText>
 
-      {/* --- ATUAÇÃO (Conteúdo e Gestão) --- */}
-      <section className="relative min-h-screen flex items-stretch border-b border-brand/30">
-        <SectionNumber num="2" />
-        <div className="flex-1 px-8 md:px-24 py-24 flex flex-col justify-center z-10 bg-bg-gray">
+      {/* --- ATUAÇÃO (Conteúdo e Gestão) (3) --- */}
+      <section className="relative min-h-screen flex flex-col md:flex-row items-stretch border-b border-brand/30">
+        <SectionNumber num="3" />
+        <div className="flex-1 px-6 md:px-24 py-16 md:py-24 flex flex-col justify-center z-10 bg-bg-gray">
           <RevealText>
-            <h2 className="text-title mb-16 text-brand">ATUAÇÃO</h2>
+            <h2 className="text-title mb-8 md:mb-16 text-brand">ATUAÇÃO</h2>
           </RevealText>
 
-          <div className="space-y-24">
+          <div className="space-y-12 md:space-y-24">
             <FadeIn delay={0.2} className="ml-0 md:ml-12">
-              <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 text-brand">
+              <h3 className="text-2xl md:text-6xl font-black uppercase tracking-tighter mb-4 md:mb-6 text-brand">
                 Conteúdo Criativo
               </h3>
-              <ul className="text-xl md:text-2xl font-bold uppercase tracking-tight space-y-2 ml-4 md:ml-12 text-brand">
+              <ul className="text-sm md:text-2xl font-bold uppercase tracking-tight space-y-1 md:space-y-2 ml-4 md:ml-12 text-brand">
                 <li><span className="text-brand mr-2">/</span> Direção criativa de fotos</li>
                 <li><span className="text-brand mr-2">/</span> Produção de conteúdo fashion/beauty</li>
                 <li><span className="text-brand mr-2">/</span> Roteiros para vídeos</li>
@@ -262,10 +255,10 @@ export default function App() {
             </FadeIn>
 
             <FadeIn delay={0.4} className="ml-0 md:ml-40">
-              <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 text-brand">
+              <h3 className="text-2xl md:text-6xl font-black uppercase tracking-tighter mb-4 md:mb-6 text-brand">
                 Gestão de<br />Redes Sociais
               </h3>
-              <ul className="text-xl md:text-2xl font-bold uppercase tracking-tight space-y-2 ml-4 md:ml-12 text-brand">
+              <ul className="text-sm md:text-2xl font-bold uppercase tracking-tight space-y-1 md:space-y-2 ml-4 md:ml-12 text-brand">
                 <li><span className="text-brand mr-2">/</span> Criação e publicação de posts</li>
                 <li><span className="text-brand mr-2">/</span> Planejamento de stories</li>
                 <li><span className="text-brand mr-2">/</span> Organização de feed</li>
@@ -276,7 +269,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className="hidden lg:block w-[40%] relative img-wrap">
+        <div className="w-full md:w-[40%] h-[50vh] md:h-auto relative img-wrap">
           <ParallaxImage 
             src="https://images.unsplash.com/photo-1528821128474-27f963b062bf?auto=format,compress&q=80&w=1000" 
             alt="Cherries"
@@ -285,20 +278,21 @@ export default function App() {
         </div>
       </section>
 
-      {/* --- PARA QUEM É MEU TRABALHO --- */}
+      {/* --- PARA QUEM É MEU TRABALHO (4) --- */}
       <section className="relative min-h-screen flex flex-col lg:flex-row items-stretch">
-        <div className="lg:w-1/2 px-8 md:px-24 py-24 flex flex-col justify-center z-10 bg-bg-gray text-brand">
+        <SectionNumber num="4" />
+        <div className="lg:w-1/2 px-6 md:px-24 py-16 md:py-24 flex flex-col justify-center z-10 bg-bg-gray text-brand">
           <RevealText>
-            <h2 className="text-[clamp(4rem,9vw,10rem)] leading-[0.8] pb-4 font-black uppercase tracking-tighter mb-12 text-brand hover:text-brand transition-colors duration-500">
+            <h2 className="text-[clamp(2.5rem,8vw,10rem)] leading-[0.8] pb-4 font-black uppercase tracking-tighter mb-8 md:mb-12 text-brand hover:text-brand transition-colors duration-500">
               PARA QUEM<br />É MEU<br /><span className="text-brand">TRABALHO</span>
             </h2>
           </RevealText>
 
           <FadeIn delay={0.2}>
-            <p className="text-2xl font-bold uppercase tracking-tight mb-8 text-brand">
-              Marcas que desejam ir<br />além de apenas postar e<br />querem construir<br /><span className="text-brand">presença, identidade e<br />posicionamento no<br />digital.</span>
+            <p className="text-lg md:text-2xl font-bold uppercase tracking-tight mb-6 md:mb-8 text-brand">
+              Marcas que desejam ir<br className="md:block hidden" /> além de apenas postar e<br className="md:block hidden" /> querem construir<br className="md:block hidden" /><span className="text-brand"> presença, identidade e<br className="md:block hidden" /> posicionamento no<br className="md:block hidden" /> digital.</span>
             </p>
-            <ul className="text-xl font-bold uppercase tracking-tight space-y-1 ml-4 list-disc marker:text-brand text-brand">
+            <ul className="text-sm md:text-xl font-bold uppercase tracking-tight space-y-1 ml-4 list-disc marker:text-brand text-brand">
               <li>Moda feminina</li>
               <li>Acessórios</li>
               <li>Calçados</li>
@@ -326,22 +320,22 @@ export default function App() {
         <span className="italic">Sua marca sendo desejada</span> <span>✦</span>
       </MarqueeText>
 
-      {/* --- COMO SERÁ TRABALHAR COMIGO --- */}
-      <section className="relative py-32 px-8 md:px-24 overflow-hidden min-h-screen flex flex-col md:flex-row items-center border-b border-brand/30 bg-bg-gray">
-        <SectionNumber num="2" />
+      {/* --- COMO SERÁ TRABALHAR COMIGO (5) --- */}
+      <section className="relative py-20 md:py-32 px-6 md:px-24 overflow-hidden min-h-screen flex flex-col md:flex-row items-center border-b border-brand/30 bg-bg-gray">
+        <SectionNumber num="5" />
         <div className="absolute inset-0 z-0 opacity-10 mix-blend-multiply pointer-events-none">
           <img src="https://images.unsplash.com/photo-1541680670548-ee0fd9edba09?auto=format,compress&q=80" alt="Texture" className="w-full h-full object-cover" />
         </div>
         
-        <div className="relative z-10 w-full md:w-1/2 pr-0 md:pr-12">
+        <div className="relative z-10 w-full md:w-1/2 md:pr-12">
           <RevealText>
-            <h2 className="text-[clamp(1rem,4vw,3rem)] leading-[0.8] font-black uppercase tracking-tighter mb-12 text-brand">ATUAÇÃO</h2>
+            <h2 className="text-[clamp(1rem,4vw,3rem)] leading-[0.8] font-black uppercase tracking-tighter mb-8 md:mb-12 text-brand">ATUAÇÃO</h2>
           </RevealText>
           <FadeIn delay={0.2}>
-            <h3 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8 pl-4 md:pl-16 text-brand">
+            <h3 className="text-2xl md:text-5xl font-black uppercase tracking-tighter mb-6 md:mb-8 pl-0 md:pl-16 text-brand">
               Como será<br />trabalhar comigo
             </h3>
-            <ul className="text-xl md:text-2xl font-bold uppercase tracking-tight space-y-2 pl-8 md:pl-24 list-disc marker:text-brand text-brand">
+            <ul className="text-sm md:text-2xl font-bold uppercase tracking-tight space-y-1 md:space-y-2 pl-4 md:pl-24 list-disc marker:text-brand text-brand">
               <li><span className="text-brand">Estudo da marca e público</span></li>
               <li><span className="text-brand">Definição do posicionamento</span></li>
               <li><span className="text-brand">Criação da estética</span></li>
@@ -363,47 +357,47 @@ export default function App() {
         </div>
       </section>
 
-      {/* --- EQUIPAMENTOS --- */}
-      <section className="py-32 px-8 md:px-24 relative overflow-hidden bg-bg-gray border-t border-brand/30">
-        <SectionNumber num="2" />
+      {/* --- EQUIPAMENTOS (6) --- */}
+      <section className="py-20 md:py-32 px-6 md:px-24 relative overflow-hidden bg-bg-gray border-t border-brand/30">
+        <SectionNumber num="6" />
         <RevealText>
-          <h2 className="text-[clamp(1.5rem,5vw,4rem)] leading-[0.8] mb-6 text-center font-black uppercase tracking-tighter text-brand">ATUAÇÃO</h2>
+          <h2 className="text-[clamp(1rem,4vw,3rem)] leading-[0.8] mb-4 text-center font-black uppercase tracking-tighter text-brand">ATUAÇÃO</h2>
         </RevealText>
         <RevealText delay={0.1}>
-           <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-24 text-center text-brand">
+           <h3 className="text-2xl md:text-6xl font-black uppercase tracking-tighter mb-12 md:mb-24 text-center text-brand">
             Equipamentos
           </h3>
         </RevealText>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 md:gap-12 max-w-7xl mx-auto">
           {[
-            { icon: <Smartphone strokeWidth={1.5} size={64} />, title: "iPhone 16", desc: "Qualidade Profissional de fotos e vídeos" },
-            { icon: <Mic strokeWidth={1.5} size={64} />, title: "Microfone", desc: "Lapela Boya" },
-            { icon: <Lightbulb strokeWidth={1.5} size={64} />, title: "Iluminação", desc: "Profissional" },
-            { icon: <Camera strokeWidth={1.5} size={64} />, title: "Tripé", desc: "(Estabilização)" },
-            { icon: <Scissors strokeWidth={1.5} size={64} />, title: "Aplicativos", desc: "Profissionais de Edição" }
+            { icon: <Smartphone strokeWidth={1.5} size={32} className="md:w-16 md:h-16" />, title: "iPhone 16", desc: "Qualidade Profissional" },
+            { icon: <Mic strokeWidth={1.5} size={32} className="md:w-16 md:h-16" />, title: "Microfone", desc: "Lapela Boya" },
+            { icon: <Lightbulb strokeWidth={1.5} size={32} className="md:w-16 md:h-16" />, title: "Iluminação", desc: "Profissional" },
+            { icon: <Camera strokeWidth={1.5} size={32} className="md:w-16 md:h-16" />, title: "Tripé", desc: "Estabilização" },
+            { icon: <Scissors strokeWidth={1.5} size={32} className="md:w-16 md:h-16" />, title: "Apps", desc: "Edição Profissional" }
           ].map((item, i) => (
             <FadeIn key={i} delay={i * 0.1} className="flex flex-col items-center text-center group">
               <motion.div 
                 whileHover={{ scale: 1.1, rotateZ: 5 }} 
-                className="mb-6 p-4 rounded-3xl border-2 border-transparent group-hover:border-brand transition-colors text-brand bg-bg-gray shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] group-hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)]"
+                className="mb-4 md:mb-6 p-3 md:p-4 rounded-2xl md:rounded-3xl border-2 border-transparent group-hover:border-brand transition-colors text-brand bg-bg-gray shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] group-hover:shadow-[0_10px_20px_rgba(0,0,0,0.1)]"
               >
                 {item.icon}
               </motion.div>
-              <h4 className="text-xl font-black uppercase tracking-tighter mb-2 text-brand">{item.title}</h4>
-              <p className="text-sm font-bold uppercase tracking-tight opacity-80 leading-tight text-brand">{item.desc}</p>
+              <h4 className="text-sm md:text-xl font-black uppercase tracking-tighter mb-1 text-brand">{item.title}</h4>
+              <p className="text-[10px] md:text-sm font-bold uppercase tracking-tight opacity-80 leading-tight text-brand">{item.desc}</p>
             </FadeIn>
           ))}
         </div>
       </section>
 
-      {/* --- DIFERENCIAL (3) --- */}
+      {/* --- DIFERENCIAL (7) --- */}
       <section className="relative min-h-screen flex items-stretch">
-        <SectionNumber num="3" />
+        <SectionNumber num="7" />
         <div className="w-[15%] md:w-[25%] bg-stripes pointer-events-none"></div>
 
-        <div className="w-[85%] md:w-[75%] flex flex-col lg:flex-row items-center p-8 md:p-16 gap-16 relative bg-bg-gray z-10 border-l-[10px] border-brand shadow-2xl">
-          <div className="w-full lg:w-1/2 aspect-square relative img-wrap overflow-hidden shadow-xl rounded-sm">
+        <div className="w-[85%] md:w-[75%] flex flex-col items-center p-6 md:p-16 gap-8 md:gap-16 relative bg-bg-gray z-10 border-l-[10px] border-brand shadow-2xl">
+          <div className="w-full lg:w-1/2 aspect-[4/3] lg:aspect-square relative img-wrap overflow-hidden shadow-xl rounded-sm">
             <ParallaxImage 
               src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format,compress&q=80&w=1000" 
               alt="Makeup Powder"
@@ -411,15 +405,15 @@ export default function App() {
             />
           </div>
 
-          <div className="w-full lg:w-1/2 flex flex-col justify-center pl-0 lg:pl-12">
+          <div className="w-full lg:w-1/2 flex flex-col justify-center">
             <RevealText>
-              <h2 className="text-[clamp(3.5rem,7vw,8rem)] leading-none font-black uppercase tracking-tighter mb-12 text-brand">
+              <h2 className="text-[clamp(2rem,7vw,8rem)] leading-none font-black uppercase tracking-tighter mb-6 md:mb-12 text-brand">
                 DIFERENCIAL
               </h2>
             </RevealText>
             <FadeIn delay={0.2}>
-              <p className="text-xl md:text-3xl font-bold uppercase tracking-tight leading-snug text-brand">
-                Meu trabalho vai <span className="text-brand underline decoration-brand decoration-[4px] underline-offset-4">além</span> da gestão de redes sociais.<br /><br />
+              <p className="text-sm md:text-3xl font-bold uppercase tracking-tight leading-snug text-brand">
+                Meu trabalho vai <span className="text-brand underline decoration-brand decoration-[2px] md:decoration-[4px] underline-offset-4">além</span> da gestão de redes sociais.<br /><br />
                 Atuo com olhar estratégico de <span className="text-brand font-black">branding e direção criativa</span>, criando identidade visual, conceito de coleções, campanhas e conteúdos que posicionam a marca com valor e desejo no mercado.
               </p>
             </FadeIn>
@@ -437,26 +431,26 @@ export default function App() {
       </MarqueeText>
 
       {/* --- CONTATO FOOTER --- */}
-      <footer className="pt-32 pb-16 px-8 md:px-24 bg-bg-gray">
+      <footer className="pt-20 md:pt-32 pb-16 px-6 md:px-24 bg-bg-gray">
         <RevealText>
-          <h2 className="text-[clamp(4rem,15vw,20rem)] leading-none font-black uppercase tracking-tighter mb-16 text-brand relative inline-block">
+          <h2 className="text-[clamp(2.5rem,15vw,20rem)] leading-none font-black uppercase tracking-tighter mb-8 md:mb-16 text-brand relative inline-block">
             CONTATO
             <span className="absolute -top-12 -right-12 text-brand text-4xl hidden lg:block">★</span>
           </h2>
         </RevealText>
 
         <div className="max-w-7xl mx-auto flex flex-col gap-0 border-b-4 border-brand">
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-8 border-t-4 border-brand group hover:bg-brand hover:text-bg-gray transition-colors px-4 text-brand">
-             <span className="text-2xl font-black uppercase tracking-tighter">WhatsApp</span>
-             <span className="text-xl font-bold uppercase tracking-tight">(24) 99882-2999</span>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex flex-col md:flex-row md:items-center justify-between py-6 md:py-8 border-t-4 border-brand group hover:bg-brand hover:text-bg-gray transition-colors px-4 text-brand">
+             <span className="text-xl md:text-2xl font-black uppercase tracking-tighter">WhatsApp</span>
+             <span className="text-base md:text-xl font-bold uppercase tracking-tight">(24) 99882-2999</span>
           </a>
-          <a href="mailto:taynatteixeira@icloud.com" className="flex items-center justify-between py-8 border-t-4 border-brand group hover:bg-brand hover:text-bg-gray transition-colors px-4 text-brand">
-             <span className="text-2xl font-black uppercase tracking-tighter">E-mail:</span>
-             <span className="text-xl font-bold uppercase tracking-tight truncate ml-4">taynatteixeira@icloud.com</span>
+          <a href="mailto:taynatteixeira@icloud.com" className="flex flex-col md:flex-row md:items-center justify-between py-6 md:py-8 border-t-4 border-brand group hover:bg-brand hover:text-bg-gray transition-colors px-4 text-brand">
+             <span className="text-xl md:text-2xl font-black uppercase tracking-tighter">E-mail:</span>
+             <span className="text-base md:text-xl font-bold uppercase tracking-tight truncate md:ml-4">taynatteixeira@icloud.com</span>
           </a>
-          <a href="https://instagram.com/ttheglamlab" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-8 border-t-4 border-brand group hover:bg-brand hover:text-brand transition-colors px-4 text-brand">
-             <span className="text-2xl font-black uppercase tracking-tighter">Instagram</span>
-             <span className="text-xl font-bold uppercase tracking-tight">@ttheglamlab</span>
+          <a href="https://instagram.com/ttheglamlab" target="_blank" rel="noopener noreferrer" className="flex flex-col md:flex-row md:items-center justify-between py-6 md:py-8 border-t-4 border-brand group hover:bg-brand hover:text-brand transition-colors px-4 text-brand">
+             <span className="text-xl md:text-2xl font-black uppercase tracking-tighter">Instagram</span>
+             <span className="text-base md:text-xl font-bold uppercase tracking-tight">@ttheglamlab</span>
           </a>
         </div>
       </footer>
